@@ -38,6 +38,8 @@ float OBSTACLE_AVOID_STRENGTH = 3000f;
 //        mirror effect 1
 //        motion detection
 //        combination of pixel difference and motion detection to move the obstacles.  or even better control seperaction strength. 
+//        face detection to control 1. speed based off distance (closer faster) 2. more faces detected changes seperation strength
+//        hand detection and controls
 
 
 void setup() {
