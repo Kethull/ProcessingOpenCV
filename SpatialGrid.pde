@@ -31,7 +31,13 @@ class SpatialGrid {
    */
   public void add(Bird b, float x, float y) {
     if (x < 0 || y < 0 || x >= width || y >= height) {
-      throw new RuntimeException("Tried to add bird outside of grid bounds!!");
+      //throw new RuntimeException("Tried to add bird outside of grid bounds!!");
+      
+      //if the bird position is out of grid bounds then just add in default position
+      PVector randomPosition = new PVector(random(100,200), random(100,200));
+      
+      x = randomPosition.x;
+      y = randomPosition.y;
     }
     
     int cellX = (int)(x / cellSize);

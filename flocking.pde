@@ -9,6 +9,7 @@
 //
 // • Bird sprite is taken from "[LPC] Birds" by bluecarrot16, commissioned by castelonia: https://opengameart.org/content/lpc-birds
 //
+import processing.video.*;
 
 PImage birdSpritesheet;
 
@@ -21,6 +22,9 @@ enum DebugMode { OFF, ALL, SINGLE };
 DebugMode debugMode = DebugMode.OFF;
 
 SpatialGrid grid;
+
+// Declare a Capture object
+Capture cam;
 
 /*
  * Bird / flocking tuning parameters
@@ -43,12 +47,18 @@ void setup() {
   // Create window
   size(1900, 1000, P3D);
   
+  // Create a Capture object that represents the default webcam
+  cam = new Capture(this, width, height);
+  
+  // Start capturing video from the webcam
+  cam.start();
+  
   // Load bird image asset
   birdSpritesheet = loadImage("bird_sprite.png");
     
   // Create a bunch of birds, at random positions
   for (int i=0; i<1000; ++i) {
-    PVector randomPosition = new PVector(random(1,width-1), random(1,height-1));
+    PVector randomPosition = new PVector(random(100,width-100), random(100,height-100));
     Bird bird = new Bird(new Sprite(birdSpritesheet), randomPosition);
     bird.update(random(0,1));
     birds.add(bird);
