@@ -5,5 +5,6 @@ Initial code was based off a flocking simulation example by Stray Basilisk, foun
 As note, this is quite a good flocking sim in terms of optimization using a spatial grid.
 
 Resources:
-https://github.com/shiffman/LearningProcessing
-https://github.com/atduskgreg/opencv-processing
+- https://github.com/shiffman/LearningProcessing
+- https://github.com/atduskgreg/opencv-processing
+- https://github.com/midiblocks/handsfree
