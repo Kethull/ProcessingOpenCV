@@ -50,6 +50,7 @@ void setup() {
   // Create window
   size(1900, 1000, P3D);
 
+  //TODO: move cam logic out of here.  Check if cam is available.  Add additional var to handle on/off logic.
   // Create a Capture object that represents the default webcam
   cam = new Capture(this, width, height);
 
