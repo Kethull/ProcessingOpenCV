@@ -44,6 +44,7 @@ float BIRD_ALIGNMENT_STRENGTH = 200f;
 float OBSTACLE_SIZE = 250;
 float OBSTACLE_AVOID_STRENGTH = 3000f;
 
+//TODO:  maybe look at using the following examples to add something interesting: frame differencing, mirror, 
 
 void setup() {
   // Create window
