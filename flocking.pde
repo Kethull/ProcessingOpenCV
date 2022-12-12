@@ -1,14 +1,3 @@
-//
-// Changes since video:
-//
-// • Added some comments
-// • Generalised obstacle-avoidance code
-// • Added motion-blur
-//
-// You are free to modify or use this code however you would like!
-//
-// • Bird sprite is taken from "[LPC] Birds" by bluecarrot16, commissioned by castelonia: https://opengameart.org/content/lpc-birds
-//
 import processing.video.*;
 
 PImage birdSpritesheet;
@@ -44,11 +33,20 @@ float BIRD_ALIGNMENT_STRENGTH = 200f;
 float OBSTACLE_SIZE = 250;
 float OBSTACLE_AVOID_STRENGTH = 3000f;
 
+//TODO:   maybe look at using the following examples to add something interesting: 
+//        frame differencing
+//        mirror effect 1
+//        motion detection
+//        combination of pixel difference and motion detection to move the obstacles.  or even better control seperaction strength. 
+//        face detection to control 1. speed based off distance (closer faster) 2. more faces detected changes seperation strength
+//        hand detection and controls
+
 
 void setup() {
   // Create window
   size(1900, 1000, P3D);
 
+  //TODO: move cam logic out of here.  Check if cam is available.  Add additional var to handle on/off logic.
   // Create a Capture object that represents the default webcam
   cam = new Capture(this, width, height);
 
