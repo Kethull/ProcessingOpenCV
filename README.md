@@ -4,7 +4,7 @@ Initial code was based off a flocking simulation example by Stray Basilisk, foun
 
 As note, this is quite a decent flocking sim in terms of optimization using a spatial grid.
 
-
+To run the sketch download Processing from https://processing.org and open the flock.pde file.
 
 Ideas:
 	maybe look at using the following examples to add something interesting: 
