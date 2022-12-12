@@ -33,14 +33,6 @@ float BIRD_ALIGNMENT_STRENGTH = 200f;
 float OBSTACLE_SIZE = 250;
 float OBSTACLE_AVOID_STRENGTH = 3000f;
 
-//TODO:   maybe look at using the following examples to add something interesting: 
-//        frame differencing
-//        mirror effect 1
-//        motion detection
-//        combination of pixel difference and motion detection to move the obstacles.  or even better control seperaction strength. 
-//        face detection to control 1. speed based off distance (closer faster) 2. more faces detected changes seperation strength
-//        hand detection and controls
-
 
 void setup() {
   // Create window
@@ -98,8 +90,7 @@ void draw() {
   } else
   {
     // Draw the sky
-    // NOTE: using alpha to create a motion-blur effect
-    fill(145, 189, 203, 30);
+    fill(145, 189, 203);
     rect(-5, -5, width+5, height+5);
   }
 
